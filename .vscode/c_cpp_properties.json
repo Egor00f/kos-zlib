@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/contrib/sdk/sources/zlib"
+            ],
+            "defines": [],
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++14",
+            "compilerPath": "C:/MinGW/msys/1.0/home/autobuild/tools/win32/bin/kos32-gcc.exe",
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/contrib/sdk/sources/zlib",
+                "/home/autobuild/tools/win32/include"
+            ],
+            "defines": [],
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++14",
+            "compilerPath": "/home/autobuild/tools/win32/bin/kos32-gcc"
+        }
+    ],
+    "version": 4
+}

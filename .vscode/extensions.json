@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "github.vscode-github-actions",
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.cpptools-themes",
+        "ms-vscode.cpptools"
+    ]
+}

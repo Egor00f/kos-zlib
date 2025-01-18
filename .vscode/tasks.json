@@ -1,0 +1,74 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build static",
+            "detail": "Build libz.a",
+            "command": "-C ${workspaceFolder} libz.a",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "shell": {
+                    "executable": "make"
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build shared",
+            "detail": "Build shared zlib",
+            "command": "-C ${workspaceFolder} libz.dll",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "shell": {
+                    "executable": "make"
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build pacakge",
+            "detail": "Build package",
+            "command": "-C ${workspaceFolder} kos-zlib-dev",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "shell": {
+                    "executable": "make"
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Clean",
+            "detail": "Clean build",
+            "command": "-C ${workspaceFolder} clean",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "shell": {
+                    "executable": "make"
+                }
+            }
+        }
+    ]
+}
