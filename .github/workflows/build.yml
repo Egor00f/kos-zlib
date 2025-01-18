@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+    - 'contrib/**'
+    - 'Makefile'
+    
+  pull_request:
+    branches: [ "main" ]
+  
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: egor00f/install-kolibrios-toolchain-action@v1.1
+
+    - name: install newlib
+      run: sudo apt install kos-newlib
+    
+    - name: make
+      run: make kos-zlib-dev
+  
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: package
+        path: kos-zlib-dev.deb
